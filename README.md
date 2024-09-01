@@ -8,8 +8,11 @@ All customusation and configuration performing by a dedicated Ansible playbook: 
 
 #### HOW TO USE:
 
-<b>To use this module you have to fill provider block and specify required variables as in the example below:</b>
+<b>To use this module you have to:</b>
 
+copy variables file to the project directory
+fill tfvars file according example.tfvars
+fill provider block and specify required variables as in the example below
 
 ```hcl
 provider "vsphere" {
@@ -59,14 +62,14 @@ module "vsphere-k8s-workers" {
 
 ```  
 add_disks = {
-          disk1 = {
+          diskw1 = {
             sizegb = "10"
             bus_num = "1"
             unit_num = "0"
             storage_profile = ""
             bus_type = "paravirtual" 
           }
-          disk2 = {
+          diskw2 = {
             sizegb = "30"
             bus_num = "1"
             unit_num = "1"
