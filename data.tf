@@ -77,6 +77,7 @@ data "template_file" "cloudinit_worker_node" {
 
       workers_count       = var.vms.workers.vm_count
       masters_count       = var.vms.masters.vm_count
+      wrk_exist           = var.vms.workers.vm_exist
   
       master0_ip          = "${split("/", var.vms.masters.ip_pool[0])[0]}"
   
