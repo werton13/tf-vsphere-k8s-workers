@@ -81,7 +81,7 @@ data "template_file" "cloudinit_worker_node" {
       master0_ip          = "${split("/", var.vms.masters.ip_pool[0])[0]}"
   
       hosts_entry0        = "${var.vsphere_host_ip}  ${var.vsphere_server}"
-      hosts_entry1        = "${split("/", var.vms.dvm.ip_pool[0])[0]}  ${var.vms.dvm.pref}"
+      #hosts_entry1        = "${split("/", var.vms.dvm.ip_pool[0])[0]}  ${var.vms.dvm.pref}"
     }
 }
 data "template_file" "metadata" {
