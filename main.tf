@@ -52,7 +52,7 @@ resource "vsphere_virtual_machine" "k8s_workers_vm"  {
   extra_config = {
      "guestinfo.userdata" = base64encode(data.template_file.cloudinit_worker_node.rendered)
      "guestinfo.userdata.encoding" = "base64"
-     "guestinfo.metadata" = base64encode(replace((replace((data.template_file.metadata.rendered), "vm_ip_address",var.vms.workers.ip_pool[count.index])), "os_host_name", "${var.vms.workers.pref}-${count.index}"))
+     "guestinfo.metadata" = base64encode(replace((replace((data.template_file.metadata.rendered), "vm_ip_address",var.vms.workers.ip_pool[count.index])), "os_host_name", "${var.vms.workers.pref}-0${var.vms.workers.vm_exist + count.index + 1}"))
      "guestinfo.metadata.encoding" = "base64"
     
   }  
