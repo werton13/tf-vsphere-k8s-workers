@@ -39,6 +39,18 @@ vms = {
                   "192.168.253.16/24"]
 
     }
+    masters = {
+      pref = "k8s-mst"
+      vm_cpu_count = "2"
+      vm_ram_size  = "4096"
+      vm_disk_size = "40"
+      vm_count = "3"
+      vm_exist = "3" # specify already existing masters number
+      ip_pool =  ["192.168.253.8/24",
+                  "192.168.253.9/24",
+                  "192.168.253.10/24"]
+
+    }
 }
 
 add_disks = {
