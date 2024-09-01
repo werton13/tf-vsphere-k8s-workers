@@ -37,7 +37,7 @@ write_files:
   - content: |
       # first hosts_entry - always vcloud hostname/ip
       ${hosts_entry0}
-#      ${hosts_entry1} 
+
     path: /etc/hosts
     append: true
   - content: |
