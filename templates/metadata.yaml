@@ -1,0 +1,15 @@
+network:
+  version: 2
+  ethernets:
+    nics:
+      match:
+        name: ens*
+      dhcp4: no
+      addresses:
+        - vm_ip_address
+      gateway4: ${ipv4_gateway}
+      nameservers:
+        addresses:
+          - ${dns_server}
+local-hostname: os_host_name
+#instance-id: w13tf-vm-md
