@@ -105,6 +105,7 @@ variable "vms" {
         vm_ram_size  = string
         vm_disk_size = string
         vm_count = string
+        vm_exist = string
         ip_pool = list(string)
     }))
  }

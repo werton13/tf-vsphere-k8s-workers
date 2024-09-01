@@ -1,5 +1,5 @@
 resource "vsphere_virtual_machine" "k8s_workers_vm"  {
-  name             = "${var.vms.workers.pref}-0${count.index + 1}"
+  name             = "${var.vms.workers.pref}-0${var.vms.workers.vm_exist + count.index + 1}"
   #"${var.vms.masters.pref}-${var.vms.masters.ip_pool[count.index]}
   hardware_version = var.vm_hardware_version
   enable_disk_uuid = true

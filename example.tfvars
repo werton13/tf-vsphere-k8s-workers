@@ -33,6 +33,7 @@ vms = {
       vm_ram_size  = "8192"
       vm_disk_size = "40"
       vm_count = "3"
+      vm_exist = "3" # specify already existing workers number
       ip_pool =  ["192.168.253.14/24",
                   "192.168.253.15/24",
                   "192.168.253.16/24"]
